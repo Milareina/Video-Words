@@ -39,13 +39,13 @@
     position: relative;
     z-index: 2;
     padding: 8vh 5vw;
-    font-size: clamp(5.9rem, 9vw, 11vh);
+    font-size: clamp(5rem, 9vw, 11vh);
     font-weight: bold;
     color: white;
     line-height: 1.4;
     word-wrap: break-word;
     max-width: 90vw;
-    min-height: 100vh;
+   
   }
   
   .video-rect {
