@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Words</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="video-layer">
+    <video id="background-video" src="video.mp4" autoplay muted loop playsinline></video>
+  </div>
+  
+  <svg id="video-mask-svg"></svg>
+  
+  <div class="text">
+    <p>
+      We’re here <span class="video-rect rect1"></span> to make<br />
+      healthy <span class="video-rect rect2"></span> living effortless,<br />
+      so you can <span class="video-rect rect3"></span> live longer<br />
+      and happier <span class="video-rect rect4"></span>
+    </p>
+  </div>
+  
+  <script src="video-mask.js"></script>
+</body>
+</html>
