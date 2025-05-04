@@ -1,64 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    background: black;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-  }
-  
-  .video-layer {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-  .video-layer video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    mask: url(#mask-rects);
-    -webkit-mask: url(#mask-rects); 
-  }
-  
-  #video-mask-svg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    pointer-events: none;
-    
-  }
-  
-  .text {
-    position: relative;
-    z-index: 2;
-    padding: 8vh 5vw;
-    font-size: clamp(5rem, 9vw, 11vh);
-    font-weight: bold;
-    color: white;
-    line-height: 1.4;
-    word-wrap: break-word;
-    max-width: 90vw;
-   
-  }
-  
-  .video-rect {
-    display: inline-block;
-    height: 1.2em;
-    vertical-align: middle;
-    border-radius: 6px;
-    background: transparent;
-   
-  }
-  
-  .rect1 { width: 20vw; }
-  .rect2 { width: 13vw; }
-  .rect3 { width: 18vw; }
-  .rect4 { width: 31vw; }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background: black;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.video-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.video-layer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask: url(#mask-rects);
+  -webkit-mask: url(#mask-rects);
+}
+
+#video-mask-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  padding: 8vh 5vw;
+  font-size: clamp(2rem, 9vw, 11vh);
+  font-weight: bold;
+  color: white;
+  line-height: 1.4;
+  word-wrap: break-word;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.text p {
+  display: inline;
+}
+
+.video-rect {
+  display: inline-block;
+  height: 1.2em;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.rect1 { width: clamp(10vw, 20vw, 300px); }
+.rect2 { width: clamp(8vw, 13vw, 200px); }
+.rect3 { width: clamp(9vw, 18vw, 270px); }
+.rect4 { width: clamp(15vw, 31vw, 465px); }
