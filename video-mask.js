@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     rects.forEach(rect => {
       const r = rect.getBoundingClientRect();
       const svgRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      
       svgRect.setAttribute('x', r.left);
       svgRect.setAttribute('y', r.top);
       svgRect.setAttribute('width', r.width);
@@ -39,3 +40,5 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', updateMask);
   window.addEventListener('scroll', updateMask);
 });
+ 
+   
